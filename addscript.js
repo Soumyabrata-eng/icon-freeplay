@@ -1,6 +1,7 @@
 /* Service Worker */ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').then(registration=>{console.log('ServiceWorker registeration successful')}).catch(registrationError=>{console.log('ServiceWorker registration failed: ', registrationError)})})}; 
 
-/* Auto theme changer */ const themes=[ "theme0", "theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"];let currentTheme=0;function changeTheme(){webTheme(themes[currentTheme]); modeL(); currentTheme=(currentTheme + 1) % themes.length;}setInterval(changeTheme, 5000);
+/* Auto theme changer */
+const themes=[ "theme0", "theme1", "theme2", "theme3", "theme4", "theme5", "theme6", "theme7", "theme8", "theme9", "theme10"];let currentTheme=0;function changeTheme(){webTheme(themes[currentTheme]); modeL(); currentTheme=(currentTheme + 1) % themes.length;} document.querySelector('.aydB').addEventListener("click",setInterval(changeTheme, 5000));
 
 /* Safelink Settings */ var aSl={par:"url",hcd:5000,gcd:15000,nwt:false,sby:"published",mxr:20,pwt:"Getting your link..."};
 
